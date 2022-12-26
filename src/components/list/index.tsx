@@ -1,5 +1,5 @@
 import { UserResponse } from "../../helpers/types"
-import { TableContainer } from "./styled"
+import { Name, Points, TableContainer } from "./styled"
 
 type Props = {
   users: UserResponse[]
@@ -7,25 +7,31 @@ type Props = {
 
 export const Table = ({ users }: Props): JSX.Element => {
   return (
-    <TableContainer>
+    <TableContainer cellSpacing="0">
       <thead>
         <tr>
           <th>Имя</th>
-          <th>Юзернэйм</th>
-          <th>Ссылка на профиль</th>
+          <th className="d-xs-none d-md-block">Юзернэйм</th>
           <th>Очки</th>
         </tr>
       </thead>
       <tbody>
         {
-          users.map(({ username, name, url }) => (
-            <tr key={username}>
-              <td>{name}</td>
-              <td>{username}</td>
-              <td>{url ? (<a href={url}>Cсылка</a>) : 'Отсутствует'}</td>
-              <td>X</td>
-            </tr>
-          ))
+          users.map(({ username, name, url }) => {
+            const profileLink = url ? (<a href={url}>{username}</a>) : username
+            return (
+              <tr key={username}>
+                <td>
+                  <Name>{name}</Name>
+                  <div className="d-md-none">{profileLink}</div>
+                </td>
+                <td className="d-xs-none d-md-block">
+                  {profileLink}
+                </td>
+                <Points>87</Points>
+              </tr>
+            )
+          })
         }
       </tbody>
     </TableContainer>
