@@ -5,10 +5,15 @@ export const calcPoints = (katas: Katas, startDate?: Date, endDate?: Date) => {
   return katas.reduce((acc, curr) => {
     if (!curr) return acc
     if (!startDate || !endDate) return acc + POINTS[curr.rank.name]
-    const isInRange = startDate >= new Date(curr.completedAt) && endDate <= new Date(curr.completedAt)
+    const isInRange = startDate <= new Date(curr.completedAt) && endDate >= new Date(curr.completedAt)
     return acc + (isInRange ? POINTS[curr.rank.name] : 0)
   }, 0)
 }
+
+export const recalcUserPoints = (data: UserResponse[], startDate: Date, endDate: Date) => data.map(user => ({ 
+  ...user, 
+  totalPoints: calcPoints(user.katas, startDate, endDate)
+}))
 
 export const formatDateForInput = (yourDate: Date) => {
   const offset = yourDate.getTimezoneOffset()

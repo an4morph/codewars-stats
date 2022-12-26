@@ -4,26 +4,37 @@ import { Dates } from "./components/dates"
 import { Table } from "./components/list"
 import { api } from "./helpers/api"
 import { UserResponse } from "./helpers/types"
-import { sortByPoints } from "./helpers/utils"
+import { recalcUserPoints, sortByPoints } from "./helpers/utils"
 import { Container } from "./styles/App.styled"
 import { Theme } from "./styles/theme"
 
+const DEFAULT_DATES = {
+  start: new Date(2022, 11, 10),
+  end: new Date(),
+}
+
 const App = (): JSX.Element => {
   const [users, setUsers] = useState<UserResponse[]>([])
-  const [startDate, setStartDate] = useState<Date>(new Date(2022, 11, 10))
-  const [endDate, setEndDate] = useState<Date>(new Date())
+  const [startDate, setStartDate] = useState<Date>(DEFAULT_DATES.start)
+  const [endDate, setEndDate] = useState<Date>(DEFAULT_DATES.end)
 
   const handleChangeDate = (e: ChangeEvent<HTMLInputElement>) => {
-    const setter = e.target.name === 'startDate' ? setStartDate : setEndDate
-    setter(new Date(e.target.value))
+    const isStartDate = e.target.name === 'startDate'
+    const newDate = new Date(e.target.value)
+    const currStartDate = isStartDate ? newDate : startDate
+    const currEndDate = isStartDate ? endDate : newDate
+    
+    setUsers(sortByPoints(recalcUserPoints(users, currStartDate, currEndDate)))
+    const setter = isStartDate ? setStartDate : setEndDate
+    setter(newDate)
   }
 
   useEffect(() => {
     api.getUsers()
       .then((data) => {
-        setUsers(sortByPoints(data))
+        setUsers(sortByPoints(recalcUserPoints(data, DEFAULT_DATES.start, DEFAULT_DATES.end)))
       })
-  }, [startDate, endDate])
+  }, [])
   
   return (
     <Theme>
