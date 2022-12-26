@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 
+import { Dates } from "./components/dates"
 import { Table } from "./components/list"
 import { api } from "./helpers/api"
 import { UserResponse } from "./helpers/types"
@@ -12,13 +13,12 @@ const App = (): JSX.Element => {
   useEffect(() => {
     api.getUsers().then(setUsers)
   }, [])
-
-  console.log(users)
   
   return (
     <Theme>
       <Container>
-        <Table />
+        <Dates />
+        <Table users={users} />
       </Container>
     </Theme>
   )
