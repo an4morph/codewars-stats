@@ -1,6 +1,11 @@
-import { User } from "./types"
+import { Kyu, User } from "./types"
 
 export const USERS: User[] = [
+  {
+    name: 'Полина',
+    username: 'an4morph',
+    url: 'https://www.codewars.com/users/an4morph'
+  },
   {
     name: 'Адиль',
     username: 'Usubaliev',
@@ -58,7 +63,7 @@ export const USERS: User[] = [
   },
 ]
 
-export const POINTS = {
+export const POINTS: Record<Kyu, number> = {
   '8 kyu': 1,
   '7 kyu': 4,
   '6 kyu': 8,

@@ -1,5 +1,6 @@
 import { USERS } from "./data"
 import { KataRank, Katas, UserResponse } from "./types"
+import { calcPoints } from "./utils"
 
 const API = 'https://www.codewars.com/api/v1/'
 
@@ -33,7 +34,9 @@ const getUsers = async (): Promise<UserResponse[]> => {
     .then((arr) => {
       return arr.map((katas, i) => ({
         katas,
-        ...USERS[i]
+        ...USERS[i],
+        totalKatas: katas.length,
+        totalPoints: calcPoints(katas),
       }))
     })
 }
