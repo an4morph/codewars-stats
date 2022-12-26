@@ -1,15 +1,60 @@
-export const USERS: { name: string, username: string }[] = [
+import { User } from "./types"
+
+export const USERS: User[] = [
   {
-      name: 'asas',
-      username: 'polina.codify'
+    name: 'Адиль',
+    username: 'Usubaliev',
+    url: 'https://www.codewars.com/users/Usubaliev'
   },
-  // {
-  //   name: 'asas',
-  //   username: 'an4morph'
-  // },
   {
-    name: 'asas',
-    username: 'misha'
+    name: 'Азат',
+    username: 'Azakee',
+    url: 'https://www.codewars.com/users/Azakee'
+  },
+  {
+    name: 'Айганыш',
+    username: 'Aiganysh%20',
+    url: 'https://www.codewars.com/users/Azakee'
+  },
+  {
+    name: 'Аким',
+    username: 'myrzabekovv',
+    url: 'https://www.codewars.com/users/myrzabekovv'
+  },
+  {
+    name: 'Байэла',
+    username: 'bayellaisss',
+    url: 'https://www.codewars.com/users/bayellaisss'
+  },
+  {
+    name: 'Бегали',
+    username: 'begali099',
+    url: 'https://www.codewars.com/users/begali099'
+  },
+  {
+    name: 'Нурэл',
+    username: 'billbeymm',
+    url: 'https://www.codewars.com/users/billbeymm'
+  },
+  {
+    name: 'Владимир',
+    username: 'MrFarEast',
+    url: 'https://www.codewars.com/users/MrFarEast'
+  },
+  {
+    name: 'Жанболот',
+    username: 'ZhanbolotAbdrasilov17',
+    url: 'https://www.codewars.com/users/ZhanbolotAbdrasilov17'
+  },
+  {
+    name: 'Эрбол',
+    username: 'ErbolSh',
+    url: 'https://www.codewars.com/users/ErbolSh'
+  },
+  {
+    name: 'Эмир',
+    username: 'Orzbkv_5',
+    url: 'https://www.codewars.com/users/Orzbkv_5'
   },
 ]
 
