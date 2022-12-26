@@ -5,6 +5,17 @@ export const Container = styled.div`
   padding: 0 15px;
   margin: 0 auto;
 
+  h1 {
+    margin-bottom: 26px;
+    margin-top: 60px;
+    font-size: 30px;
+
+    @media (min-width: 768px) {
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+  }
+
   .d-xs-none, .d-sm-none, .d-md-none, .d-lg-none, .d-xl-none {
     display: block;
   }

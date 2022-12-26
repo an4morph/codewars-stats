@@ -17,6 +17,7 @@ const App = (): JSX.Element => {
   return (
     <Theme>
       <Container>
+        <h1>Codify Codewars Stats</h1>
         <Dates />
         <Table users={users} />
       </Container>
