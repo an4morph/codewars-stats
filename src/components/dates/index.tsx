@@ -1,20 +1,15 @@
-import { ChangeEvent, useState } from "react"
+import { ChangeEvent } from "react"
 
 import { formatDateForInput } from "../../helpers/utils"
 import { Container } from "./styled"
 
-export const Dates = (): JSX.Element => {
-  const [startDate, setStartDate] = useState<Date>(new Date(2022, 11, 10))
-  const [endDate, setEndDate] = useState<Date>(new Date())
+type Props = {
+  startDate: Date
+  endDate: Date
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void
+}
 
-  const handleChangeStartDate = (e: ChangeEvent<HTMLInputElement>) => {
-    setStartDate(new Date(e.target.value))
-  }
-
-  const handleChangeEndDate = (e: ChangeEvent<HTMLInputElement>) => {
-    setEndDate(new Date(e.target.value))
-  }
-
+export const Dates = ({ startDate, endDate, onChange }: Props): JSX.Element => {
   return (
     <Container>
       <label htmlFor="startDate">
@@ -22,7 +17,7 @@ export const Dates = (): JSX.Element => {
         <input 
           id="startDate"
           name="startDate"
-          onChange={handleChangeStartDate}
+          onChange={onChange}
           type="date"
           value={formatDateForInput(startDate)}
         />
@@ -32,7 +27,7 @@ export const Dates = (): JSX.Element => {
         <input 
           id="endDate"
           name="endDate"
-          onChange={handleChangeEndDate}
+          onChange={onChange}
           type="date"
           value={formatDateForInput(endDate)}
         />
