@@ -61,6 +61,16 @@ export const USERS: User[] = [
     username: 'Orzbkv_5',
     url: 'https://www.codewars.com/users/Orzbkv_5'
   },
+  {
+    name: 'Акжол',
+    username: 'aaidarov',
+    url: 'https://www.codewars.com/users/aaidarov'
+  },
+  {
+    name: 'Жибек',
+    username: 'ZhibekTalipova',
+    url: 'https://www.codewars.com/users/ZhibekTalipova'
+  },
 ]
 
 export const POINTS: Record<Kyu, number> = {
