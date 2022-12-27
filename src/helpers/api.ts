@@ -35,7 +35,6 @@ const getUsers = async (): Promise<UserResponse[]> => {
       return arr.map((katas, i) => ({
         katas,
         ...USERS[i],
-        totalKatas: katas.length,
         totalPoints: calcPoints(katas),
       }))
     })

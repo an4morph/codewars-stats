@@ -27,6 +27,5 @@ export type UserResponse = {
   username: string
   url?: string
   katas: Katas,
-  totalKatas: number
   totalPoints: number
 }

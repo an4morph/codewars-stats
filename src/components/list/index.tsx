@@ -12,13 +12,12 @@ export const Table = ({ users }: Props): JSX.Element => {
         <tr>
           <th>Имя</th>
           <th className="d-xs-none d-md-block">Юзернэйм</th>
-          <th>Всего задач</th>
           <th>Очки</th>
         </tr>
       </thead>
       <tbody>
         {
-          users.map(({ username, name, url, totalKatas, totalPoints }) => {
+          users.map(({ username, name, url, totalPoints }) => {
             const profileLink = url ? (<a href={url}>{username}</a>) : username
             return (
               <tr key={username}>
@@ -29,7 +28,6 @@ export const Table = ({ users }: Props): JSX.Element => {
                 <td className="d-xs-none d-md-block">
                   {profileLink}
                 </td>
-                <td>{totalKatas}</td>
                 <Points>{totalPoints}</Points>
               </tr>
             )
