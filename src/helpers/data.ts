@@ -1,11 +1,11 @@
 import { Kyu, User } from "./types"
 
+export const DEFAULT_DATES = {
+  start: new Date(2022, 11, 27),
+  end: new Date(),
+}
+
 export const USERS: User[] = [
-  {
-    name: 'Полина',
-    username: 'an4morph',
-    url: 'https://www.codewars.com/users/an4morph'
-  },
   {
     name: 'Адиль',
     username: 'Usubaliev',

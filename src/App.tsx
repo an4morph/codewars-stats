@@ -3,15 +3,11 @@ import { ChangeEvent, useEffect, useState } from "react"
 import { Dates } from "./components/dates"
 import { Table } from "./components/list"
 import { api } from "./helpers/api"
+import { DEFAULT_DATES } from "./helpers/data"
 import { UserResponse } from "./helpers/types"
 import { recalcUserPoints, sortByPoints } from "./helpers/utils"
 import { Container } from "./styles/App.styled"
 import { Theme } from "./styles/theme"
-
-const DEFAULT_DATES = {
-  start: new Date(2022, 11, 10),
-  end: new Date(),
-}
 
 const App = (): JSX.Element => {
   const [users, setUsers] = useState<UserResponse[]>([])
