@@ -1,75 +1,80 @@
 import { Kyu, User } from "./types"
 
 export const DEFAULT_DATES = {
-  start: new Date(2022, 11, 27),
+  start: new Date(2023, 2, 9),
   end: new Date(),
 }
 
 export const USERS: User[] = [
   {
-    name: 'Адиль',
-    username: 'Usubaliev',
-    url: 'https://www.codewars.com/users/Usubaliev'
+    name: 'Абай Тургунбай уулу',
+    username: 'abaikb',
+    url: 'https://www.codewars.com/users/abaikb'
   },
   {
-    name: 'Азат',
-    username: 'Azakee',
-    url: 'https://www.codewars.com/users/Azakee'
+    name: 'Абдульазиз Лансаров',
+    username: 'lansarov-aziz',
+    url: 'https://www.codewars.com/users/lansarov-aziz'
   },
   {
-    name: 'Айганыш',
-    username: 'Aiganysh%20',
-    url: 'https://www.codewars.com/users/Azakee'
+    name: 'Азиз Чидеров',
+    username: 'Aziz%20Chiderov',
+    url: 'https://www.codewars.com/users/Aziz%20Chiderov'
   },
   {
-    name: 'Аким',
-    username: 'myrzabekovv',
-    url: 'https://www.codewars.com/users/myrzabekovv'
+    name: 'Айпери Жороева',
+    username: 'Aiperiwa',
+    url: 'https://www.codewars.com/users/Aiperiwa'
   },
   {
-    name: 'Байэла',
-    username: 'bayellaisss',
-    url: 'https://www.codewars.com/users/bayellaisss'
+    name: 'Аида Токтомушова',
+    username: 'Toktomushova',
+    url: 'https://www.codewars.com/users/Toktomushova'
   },
   {
-    name: 'Бегали',
-    username: 'begali099',
-    url: 'https://www.codewars.com/users/begali099'
+    name: 'Виталий Воробьев',
+    username: 'sparrowkg',
+    url: 'https://www.codewars.com/users/sparrowkg'
   },
   {
-    name: 'Нурэл',
-    username: 'billbeymm',
-    url: 'https://www.codewars.com/users/billbeymm'
+    name: 'Асель Жанибекова',
+    username: 'Aixiel',
+    url: 'https://www.codewars.com/users/Aixiel'
   },
   {
-    name: 'Владимир',
-    username: 'MrFarEast',
-    url: 'https://www.codewars.com/users/MrFarEast'
+    name: 'Женишгул Абдулдаханова',
+    username: 'Abduldahanova',
+    url: 'https://www.codewars.com/users/Abduldahanova'
   },
   {
-    name: 'Жанболот',
-    username: 'ZhanbolotAbdrasilov17',
-    url: 'https://www.codewars.com/users/ZhanbolotAbdrasilov17'
+    name: 'Саматбек Байызов',
+    username: 'Samy4-byte',
+    url: 'https://www.codewars.com/users/Samy4-byte'
   },
   {
-    name: 'Эрбол',
-    username: 'ErbolSh',
-    url: 'https://www.codewars.com/users/ErbolSh'
+    name: 'Суусара Матаева',
+    username: 'suusara',
+    url: 'https://www.codewars.com/users/suusara'
   },
   {
-    name: 'Эмир',
-    username: 'Orzbkv_5',
-    url: 'https://www.codewars.com/users/Orzbkv_5'
+    name: 'Тансу Бактыбаева',
+    username: 'tansubva',
+    url: 'https://www.codewars.com/users/tansubva'
   },
   {
-    name: 'Акжол',
-    username: 'aaidarov',
-    url: 'https://www.codewars.com/users/aaidarov'
+    name: 'Улукбек Сеитмамбетов',
+    username: 'usb5858',
+    url: 'https://www.codewars.com/users/usb5858'
   },
   {
-    name: 'Жибек',
-    username: 'ZhibekTalipova',
-    url: 'https://www.codewars.com/users/ZhibekTalipova'
+    name: 'Эдиль Эргешов',
+    username: 'klaus1233213',
+    url: 'https://www.codewars.com/users/klaus1233213'
+  },
+  {
+    name: 'Эсен Азимов',
+    username: 'Esenaz',
+    url: 'https://www.codewars.com/users/Esenaz'
   },
 ]
 
