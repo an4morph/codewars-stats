@@ -2,7 +2,7 @@ import { Kyu, User } from "./types"
 
 export const DEFAULT_DATES = {
   start: new Date(2023, 2, 9),
-  end: new Date(),
+  end: new Date(2023, 2, 20),
 }
 
 export const USERS: User[] = [
